@@ -1,2 +1,23 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="container h-100">
+  <div class="row  h-100 justify-content-center align-items-center">
+    <div class="row justify-content-center">
+      <div class="col-12">
+        <h2 class="text-center"> <%=@user.name%> </h2>
+      </div>
+      <div class="col-md-2 mb-3 d-flex justify-content-center">
+        <%= image_tag @user.photo, class: 'rounded-circle border'%>
+      </div>
+      <div class="col-md-6 m-2 d-flex justify-content-center flex-column">
+        <div class="col-12">
+          E-mail: <%=@user.email%>
+        </div>
+        <div class="col-12">
+          Sexo: <%= @translated_gender %>
+        </div>
+      </div>
+      <div class="col-md-7">
+        <%= link_to '<< Voltar', :back %>
+      </div>
+    </div>
+  </div>
+</div>
