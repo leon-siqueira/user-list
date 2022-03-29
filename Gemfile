@@ -22,6 +22,8 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# icons
+gem "font-awesome-sass"
 # no more node_module/bootstrap
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
