@@ -22,6 +22,12 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# no more node_module/bootstrap
+gem 'autoprefixer-rails'
+# hosting images on the cloud
+gem 'cloudinary'
+# hide my api keys
+gem 'dotenv-rails'
 # Pagination gem
 gem 'kaminari'
 

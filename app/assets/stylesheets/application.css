@@ -1,5 +1,4 @@
-@import "node_modules/bootstrap/scss/bootstrap";
-@import "users/show";
+@import "bootstrap/scss/bootstrap";
 
 body, html {
   height: 100%;
