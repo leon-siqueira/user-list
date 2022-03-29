@@ -12,9 +12,9 @@
       <div class="col-lg-8 d-flex justify-content-center py-3">
         <%= paginate @users, window: 4 %>
       </div>
-      <div class="col-lg-8 d-flex py-3 bg-primary rounded-top">
-        <div class="col-2 ps-2"><strong class="text-white">ID</strong></div>
-        <div class="col-10"><strong class="text-white">Nome</strong></div>
+      <div class="col-lg-8 d-flex py-3 pb-5 bg-primary rounded-top">
+        <div class="col-2  ps-2"><strong class="text-white">ID</strong></div>
+        <div class="col-10 ps-2"><strong class="text-white">Nome</strong></div>
       </div>
       <% @users.each do |user| %>
         <div class="col-lg-8 d-flex <%= alternate_color(row_count) %> py-3 border border-top-0 align-items-center">
