@@ -3,7 +3,7 @@
   <h1 class='text-center pt-4'>Lista de Usuários</h1>
 </div>
 <div class="container">
-  <div class="row justify-content-center m-3 h-100 align-content-center mb-3">
+  <div class="row justify-content-center m-3 h-100 align-content-center mb-5">
     <% if @users.empty?%>
       <div class="col-12">
         <h2 class="text-center">No users found :(</h2>
@@ -21,7 +21,7 @@
           <div class="col-2 ps-2"><%=user.id%></div>
           <div class="col-8 ps-2"><%=user.name%></div>
           <div class="col-2 pe-2 text-end">
-            <%= link_to user_path(user) do%>
+            <%= link_to user_path(user), class: 'd-flex align-items-center decoration-none justify-content-end' do%>
               <i class="fa-solid fa-circle-info fs-4"></i>
             <% end %>
           </div>
