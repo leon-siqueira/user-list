@@ -5,7 +5,11 @@
         <h2 class="text-center"> <%=@user.name%> </h2>
       </div>
       <div class="col-md-2 mb-3 d-flex justify-content-center">
-        <%= image_tag @user.photo, class: 'rounded-circle border'%>
+        <% if @user.photo.attached? %>
+          <%= image_tag @user.photo, class: 'rounded-circle border w-100'%>
+        <% else %>
+          <%= image_tag 'anonymous-user.png', class: 'rounded-circle border w-100'%>
+        <% end %>
       </div>
       <div class="col-md-6 m-2 d-flex justify-content-center flex-column">
         <div class="col-12">

@@ -1,5 +1,5 @@
 <% row_count = 0 %>
-<h1 class='text-center m-5'>Lista de Usuários</h1>
+<h1 class='text-center py-3'>Lista de Usuários</h1>
 <div class="container">
   <div class="row justify-content-center m-3">
     <% if @users.empty?%>
@@ -7,11 +7,13 @@
         <h2>No users found :(</h2>
       </div>
     <% else %>
-      <div class="col-lg-8 d-flex py-3 border">
-        <div class="col-2 ps-2"><strong>ID</strong></div>
-        <div class="col-10"><strong>Nome</strong></div>
+      <div class="col-lg-8 d-flex justify-content-center py-3">
+        <%= paginate @users %>
       </div>
-
+      <div class="col-lg-8 d-flex py-3 bg-primary rounded-top">
+        <div class="col-2 ps-2"><strong class="text-white">ID</strong></div>
+        <div class="col-10"><strong class="text-white">Nome</strong></div>
+      </div>
       <% @users.each do |user| %>
         <div class="col-lg-8 d-flex <%= alternate_color(row_count) %> py-3 border border-top-0 align-items-center">
           <div class="col-2 ps-2"><%=user.id%></div>
