@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.7'
 
 # no more node_module/bootstrap
 gem 'autoprefixer-rails'
+gem 'bootstrap-sass'
 # hosting images on the cloud
 gem 'cloudinary'
 # hide my api keys
