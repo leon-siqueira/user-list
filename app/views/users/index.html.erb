@@ -3,7 +3,7 @@
   <h1 class='text-center pt-4'>Lista de Usuários</h1>
 </div>
 <div class="container">
-  <div class="row justify-content-center m-3 h-100 align-content-center">
+  <div class="row justify-content-center m-3 h-100 align-content-center mb-3">
     <% if @users.empty?%>
       <div class="col-12">
         <h2 class="text-center">No users found :(</h2>
@@ -12,7 +12,7 @@
       <div class="col-lg-8 d-flex justify-content-center py-3">
         <%= paginate @users, window: 4 %>
       </div>
-      <div class="col-lg-8 d-flex py-3 pb-5 bg-primary rounded-top">
+      <div class="col-lg-8 d-flex py-3 bg-primary rounded-top">
         <div class="col-2  ps-2"><strong class="text-white">ID</strong></div>
         <div class="col-10 ps-2"><strong class="text-white">Nome</strong></div>
       </div>
