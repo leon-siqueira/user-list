@@ -1,27 +1,7 @@
-<div class="container h-100">
-  <div class="row  h-100 justify-content-center align-items-center">
-    <div class="row justify-content-center">
-      <div class="col-12 mb-3">
-        <h2 class="text-center yellow"> <%=@user.name%> </h2>
-      </div>
-      <div class="col-8 col-md-2 mb-3 d-flex justify-content-center">
-        <% if @user.photo.attached? %>
-          <%= cl_image_tag @user.photo.key, class: 'rounded-circle border w-100'%>
-        <% else %>
-          <%= image_tag 'anonymous-user.png', class: 'rounded-circle border w-100'%>
-        <% end %>
-      </div>
-      <div class="col-md-6 m-2 d-flex justify-content-center flex-column">
-        <div class="col-12">
-          <b>E-mail:</b> <%=@user.email%>
-        </div>
-        <div class="col-12">
-          <b>Sexo:</b> <%= @translated_gender %>
-        </div>
-      </div>
-      <div class="col-md-7">
-        <%= link_to 'Voltar', :back %>
-      </div>
-    </div>
-  </div>
-</div>
+<%= turbo_frame_tag :modal do %>
+  <%# <div class="container h-100"> %>
+    <%# <div class="row  h-100 justify-content-center align-items-center"> %>
+      <%= render 'show_modal', user: @user%>
+    <%# </div> %>
+  <%# </div> %>
+<% end %>

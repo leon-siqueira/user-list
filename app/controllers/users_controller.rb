@@ -6,19 +6,17 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @translated_gender = gender_transltate(@user.gender)
+    # @translated_gender = gender_transltate(@user.gender)
   end
 
-  private
-
-  def gender_transltate(gender)
-    case gender
-    when 'male'
-      'Masculino'
-    when 'female'
-      'Feminino'
-    else
-      'Não especificado'
-    end
-  end
+  # def gender_transltate(gender)
+  #   case gender
+  #   when 'male'
+  #     'Masculino'
+  #   when 'female'
+  #     'Feminino'
+  #   else
+  #     'Não especificado'
+  #   end
+  # end
 end

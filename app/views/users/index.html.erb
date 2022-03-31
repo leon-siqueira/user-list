@@ -19,10 +19,10 @@
       <% @users.each do |user| %>
         <div class="col-lg-8 d-flex <%= alternate_color(row_count) %> py-3 border border-top-0 align-items-center">
           <div class="col-2 ps-2"><%=user.id%></div>
-          <div class="col-8 ps-2"><%=user.name%></div>
-          <div class="col-2 pe-2 text-end">
-            <%= link_to user_path(user), class: 'd-flex align-items-center decoration-none justify-content-end' do%>
-              <i class="fa-solid fa-circle-info fs-4"></i>
+          <div class="col-9 ps-2"><%=user.name%></div>
+          <div class="col-1">
+            <%= link_to user_path(user), data: {turbo_frame: 'modal'} , class: 'd-flex align-items-center decoration-none wid-30' do%>
+              <i class="fa-solid fa-circle-info fs-3"></i>
             <% end %>
           </div>
         </div>
