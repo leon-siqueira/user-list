@@ -11,7 +11,6 @@ export default class extends Controller {
   }
 
   closeWithKeyboard(e) {
-    console.log(e);
     if (e.code == "Escape") {
       this.hideModal()
     }
