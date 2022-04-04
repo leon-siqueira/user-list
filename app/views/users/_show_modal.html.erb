@@ -1,0 +1,28 @@
+<div class="modal-bg" data-controller="turbo-modal"
+                      data-turbo-modal-target="modal"
+                      data-action="click@window->turbo-modal#closeBackground">
+  <div class="modal-window row justify-content-center bg-light p-5 rounded-3 m-3" data-turbo-modal-target="window"
+                                                                                  data-action="keyup@window->turbo-modal#closeWithKeyboard">
+    <div class="col-12 mb-3 d-flex align-items-center justify-content-center window-header">
+      <h2 class="mb-0 text-center"> <%=user.name%> </h2>
+      <a class="btn btn-secondary close-button d-flex align-items-center justify-content" data-action="click->turbo-modal#hideModal">
+        <i class="fa-solid fa-xmark fs-4"></i>
+      </a>
+    </div>
+    <div class="col-7 col-md-3 mb-3 d-flex justify-content-center">
+      <% if user.photo.attached? %>
+        <%= cl_image_tag user.photo.key, class: 'rounded-circle border w-100'%>
+      <% else %>
+        <%= image_tag 'anonymous-user.png', class: 'rounded-circle border w-100'%>
+      <% end %>
+    </div>
+    <div class="col-md-6 m-2 d-flex justify-content-center flex-column">
+      <div class="col-12">
+        <b>E-mail:</b> <%=user.email%>
+      </div>
+      <div class="col-12">
+        <b>Sexo:</b> <%= gender_transltate(user.gender) %>
+      </div>
+    </div>
+  </div>
+</div>

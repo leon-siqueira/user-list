@@ -1,5 +1,7 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome";
+@import "users/index";
+@import "users/show";
 
 body, html {
   height: 100%;
@@ -7,4 +9,51 @@ body, html {
 
 .decoration-none{
   text-decoration: none;
+}
+
+.modal-bg{
+  z-index: 4;
+  background-color: rgba(0, 0, 0, 0.212);
+  backdrop-filter: blur(4px);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation-name: fadeIn;
+  animation-duration: 0.2s;
+  transition: ease-in-out;
+}
+
+.modal-window{
+  z-index: 5;
+  animation-name: pulse;
+  animation-duration: 0.2s;
+  transition: ease-in-out;
+}
+
+@keyframes pulse {
+  0%{
+    transform: scale(0);
+  }
+  50%{
+    transform: scale(1.1);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+
+  0%{
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 1;
+  }
 }
