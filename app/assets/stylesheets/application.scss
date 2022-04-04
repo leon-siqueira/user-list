@@ -11,11 +11,10 @@ body, html {
   text-decoration: none;
 }
 
-
 .modal-bg{
-  z-index: 5;
+  z-index: 4;
   background-color: rgba(0, 0, 0, 0.212);
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(4px);
   position: fixed;
   top: 0;
   bottom: 0;
@@ -30,6 +29,7 @@ body, html {
 }
 
 .modal-window{
+  z-index: 5;
   animation-name: pulse;
   animation-duration: 0.2s;
   transition: ease-in-out;
